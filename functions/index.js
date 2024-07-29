@@ -241,6 +241,61 @@ console.log(highestScore);
 // ! spread method
 const nums=[132,32,4,233544,5,2324,5,23454,5,24564,457,4,65,4,5,357]
 
-console.log(Math.max(...nums))
+// console.log(Math.max(...nums))
 
-console.log(...'aditya');
+// console.log(...'aditya');
+
+let all_arr=[...nums,...movies]
+// console.log(all_arr);
+
+let guptas={name:'gupta',class:'upper'}
+let brahman={name:'brahmans',class:'lower'}
+let main_obj={...guptas,...brahman}
+// console.log(main_obj);
+
+
+const formData={
+    email:'monu@1233',
+    passward:'krishna@9414',
+    firstname:'mona',
+    lastname:'parminder',
+    born:2004,
+    bio:'persuing private mbbs',
+    city:'banaras',
+    country:'india'
+}
+const user={...formData,id:123,isadmin:true}
+// console.log(user);
+
+function sum(...num){
+    return num.reduce((total,i)=>total+i)
+}
+// console.log(sum(32,43,345,4356,357,5646867,346,345));
+
+// ! array destructuring
+
+let score=[98765,87654,76543,65432,54321,49876,32109,21098,10987]
+const [gold,silver,...everyone]=score;
+// console.log(gold);
+// console.log(silver);
+// console.log(everyone);
+
+const {email,city,country='america /*default value*/',born:birthyear}=formData
+// console.log(email);
+// console.log(city);
+// console.log(born);  //!not going to work because of rename of property
+
+// console.log(birthyear);
+
+// console.log(country);
+
+// ! destructuring parameter
+// function fullname(user){
+//     const {firstname,lastname}=user
+//     return `${firstname} ${lastname}`
+// }
+
+function fullname({firstname,lastname}){
+    return `${firstname} ${lastname}`
+}
+console.log(fullname(formData));
