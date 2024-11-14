@@ -299,3 +299,20 @@ function fullname({firstname,lastname}){
     return `${firstname} ${lastname}`
 }
 console.log(fullname(formData));
+
+
+//question
+function fun1(a) {
+    a= a* 2;
+    function fun2(b) {
+      return a + b; 
+    } 
+    a =a+ 2;
+    return fun2; 
+  }
+  
+  function fun3(){
+    return fun1(2) (2);
+  }
+  
+  console.log(fun3());

@@ -16,3 +16,4 @@ console.log(friends.indexOf('steven'));
 
 console.log(friends.includes('steven'));  // it use strict equality
 
+
