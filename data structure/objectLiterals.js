@@ -57,6 +57,15 @@ const restaurant = {
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
   // console.log(day);
-  const open = restaurant.openingHours[day]?.open||'closed';
-  console.log(open);
+  const open = restaurant.openingHours[day]?.open || "closed";
+  //   console.log(open);
 }
+
+// ! optional chaining on arrays
+const users = [
+  { name: "adi", email: "adi@gmail.com" },
+  { name: "shubhi", email: "shubhi@gmail.com" },
+];
+// console.log(users[0].email ?? "user data is empty");   //*adi@gmail.com
+console.log(users[0].gmail ?? "user data is empty");   //* user data is empty
+
