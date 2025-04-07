@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>callback functions</h1>
+    <button id="clickMe">click me</button>
+    <script>
+      /*
+      // callback function
+
+
+      setTimeout(function () {
+        console.log("timer");
+      }, 5000);
+      function x(y) {
+        console.log("x");
+        y()
+      }
+      x(function y() {
+        console.log("y");
+      });
+      */
+
+
+      
+      function attachEvent() {
+        let count = 0;
+        document
+          .getElementById("clickMe")
+          .addEventListener("click", function greet() {
+            console.log("hi madam ji", ++count);
+          });
+      }
+      attachEvent()
+    </script>
+
+  </body>
+</html>
