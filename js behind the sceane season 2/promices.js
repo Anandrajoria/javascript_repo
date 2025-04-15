@@ -1,6 +1,6 @@
 //! how promises are made
 
-// 1
+
 const promise1 = new Promise(function (resolve, reject) {
   // do an async tasks
   setTimeout(function () {
@@ -79,3 +79,5 @@ async function consumePromise5() {
   }
 }
 consumePromise5()
+
+
